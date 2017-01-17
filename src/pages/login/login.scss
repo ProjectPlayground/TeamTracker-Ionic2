@@ -1,0 +1,55 @@
+page-login {
+  //   ion-content {
+  //     background-image: url('../../assets/images/backgrounds/bg.jpg');
+  //   }
+  .top-title {
+    // margin-top: 0;
+    // padding-bottom: 5%;
+    font-size: 60px;
+  }
+  ion-content {
+    ion-card {
+      margin-top: 30% !important;
+      opacity: 0.90;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      width: 70% !important;
+      // height: 50%;
+    }
+  }
+  @keyframes animatedBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+  @-webkit-keyframes animatedBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+  // h2 {
+  //   color: white !important;
+  // }
+  // body {
+  //   cursor: url('http://ionicframework.com/img/finger.png'), auto;
+  // }
+  .scroll-content {
+    // width: 560px;
+    // height: 400px;
+    background-image: url('../assets/bg/bg.jpg');
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    background-size: cover;
+    -webkit-animation: animatedBackground 120s linear infinite;
+    // -moz-animation: animatedBackground 40s linear infinite;
+    // -ms-animation: animatedBackground 40s linear infinite;
+    // -o-animation: animatedBackground 40s linear infinite;
+    animation: animatedBackground 120s linear infinite;
+  }
+}

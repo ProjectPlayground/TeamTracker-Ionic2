@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Teams</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <span *ngIf="!team">
+
+    <ion-list>
+      <ion-card *ngFor="let team of teams" >
+        <ion-item>
+        <ion-avatar item-left>
+          <img [src]="team.avatar">
+        </ion-avatar>
+        <h2>{{team.name}}</h2>
+        <p>{{team.subtitle}}</p>
+        </ion-item>
+        <img [src]="team.image" alt="">
+        <ion-card-content>
+          <p>{{team.description}}</p>
+        </ion-card-content>
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-left clear small (click)="teamTapped($event, team)">
+                <ion-icon name="ios-navigate-outline"></ion-icon>
+                <div>Map</div>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon name="ios-star-outline"></ion-icon>
+                <div>4 Stars</div>
+              </button>
+            </ion-col>
+            <ion-col center text-center>
+              <ion-note>
+                11h ago
+              </ion-note>
+            </ion-col>
+          </ion-row>
+      </ion-card>
+    </ion-list>
+
+    
+  </span>
+  <ion-list *ngIf="team">
+    <ion-list-header>
+      <ion-icon name="md-people"></ion-icon>
+      Team {{team.name}}
+    </ion-list-header>
+    <div text-center>
+      <img class="team_logo" [src]="team.logo" alt="">
+    </div>
+    <ion-item *ngFor="let member of team.members">
+      {{member.name}}
+    </ion-item>
+    <button ion-button block color="danger" (click)="opemMapWithMembers(team.members)" icon-left>
+      <ion-icon name="ios-locate-outline"></ion-icon>
+      Show on Map
+      </button>
+  </ion-list>
+</ion-content>
