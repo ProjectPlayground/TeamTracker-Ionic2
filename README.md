@@ -6,6 +6,9 @@
 
 ## Screenshots of the App
 
+### Sample login animation
+![Login](screenshots/login.gif)
+
 ![Login](screenshots/sc1.png)
 ![Map](screenshots/sc2.png)
 ![Sidemenu](screenshots/sc3.png)
